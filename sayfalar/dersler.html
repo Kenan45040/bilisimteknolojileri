@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derslerim | Kenan YARAMIŞ</title>
+  <link rel="stylesheet" href="../stiller/stil.css">
+  <link rel="stylesheet" href="../stiller/dersler.css">
+  
+</head>
+<body>
+
+
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Kenan YARAMIŞ</div>
+    <ul>
+      <li><a href="../index.html">Ana Sayfa</a></li>
+      <li><a href="dersler.html" class="active">Dersler</a></li>
+      <li><a href="panel.html">Panel</a></li>
+       <!-- Kullanici Giriş Kontrolü-->
+        <script>
+          
+          if (localStorage.getItem("OgrenciGirdiMi") !== "evet") {
+            
+            document.write( '<li><a href="giris.html">Giriş</a></li>');
+          }
+          else{
+            const kullaniciAdi=localStorage.getItem("KullaniciAdiSoyadi");
+            document.write(`
+            <li><a href="">${kullaniciAdi}</a></li>
+          `);
+          }
+        </script>
+      
+    </ul>
+  </nav>
+
+  <header class="sayfa-baslik">
+    <h1>📚 Derslerim</h1>
+    <p>Dal, sınıf ve derslerinizi tıklayarak detaylara ulaşabilirsiniz.</p>
+  </header>
+
+  <main class="detalist-container">
+
+    <!-- Yazılım Geliştirme Dalı -->
+    <details>
+      <summary>Yazılım Geliştirme Dalı</summary>
+
+      <details>
+        <summary>9. Sınıf</summary>
+         <div class="ders-karti">
+          <h2>🖥 Programlama Temelleri</h2>
+          <p>Algoritma mantığı ve temel programlama kavramlarını öğrenme.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>💻 Bilişim Teknolojilerinin Temelleri</h2>
+          <p>Bilgisayar sistemleri ve temel bilişim teknolojileri kavramları.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+           <button class="btn kilitli" data-link="../kaynaklar/bttkaynaklar.html" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>🎨 Bilgisayarlı Tasarım Uygulamaları</h2>
+          <p>Temel CAD ve tasarım programları ile uygulamalı öğrenme.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>🛠 Mesleki Gelişim Atölyesi</h2>
+          <p>Temel uygulama ve mesleki becerilerin geliştirilmesi.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+      </details>
+
+      <details>
+        <summary>10. Sınıf</summary>
+        <div class="ders-karti">
+          <h2>🤖 Robotik ve Kodlama</h2>
+          <p>Arduino ve sensör uygulamaları ile proje tabanlı öğrenme.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>💻 Nesne Tabanlı Programlama</h2>
+          <p>Objeler ve sınıflar kullanarak yazılım geliştirme.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>11. Sınıf</summary>
+        <div class="ders-karti">
+          <h2>🌐 Web Tabanlı Uygulama Geliştirme</h2>
+          <p>HTML, CSS, JS ile web uygulamaları geliştirme.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>📱 Mobil Uygulamalar</h2>
+          <p>Android ve iOS platformlarında temel uygulama geliştirme.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>🎨 Grafik ve Canlandırma</h2>
+          <p>Temel grafik tasarım ve animasyon teknikleri.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>12. Sınıf</summary>
+        <div class="ders-karti">
+          <h2>🏢 İşletmelerde Mesleki Eğitim</h2>
+          <p>Mesleki uygulamalar ile gerçek iş ortamı deneyimi.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>📚 Seçmeli Dersler</h2>
+          <p>Öğrencinin ilgisine göre seçebileceği dersler.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+      </details>
+
+    </details>
+
+    <!-- Ağ İşletmenliği ve Siber Güvenlik Dalı -->
+    <details>
+      <summary>Ağ İşletmenliği ve Siber Güvenlik Dalı</summary>
+
+      <details>
+        <summary>9. Sınıf</summary>
+
+        <div class="ders-karti">
+          <h2>🖥 Programlama Temelleri</h2>
+          <p>Algoritma mantığı ve temel programlama kavramlarını öğrenme.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>💻 Bilişim Teknolojilerinin Temelleri</h2>
+          <p>Bilgisayar sistemleri ve temel bilişim teknolojileri kavramları.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>🎨 Bilgisayarlı Tasarım Uygulamaları</h2>
+          <p>Temel CAD ve tasarım programları ile uygulamalı öğrenme.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>🛠 Mesleki Gelişim Atölyesi</h2>
+          <p>Temel uygulama ve mesleki becerilerin geliştirilmesi.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+      </details>
+
+      <details>
+        <summary>10. Sınıf</summary>
+        <div class="ders-karti">
+          <h2>🌐 Ağ Sistemleri ve Anahtarlama</h2>
+          <p>Temel ağ sistemleri ve anahtar yapılarını öğrenme.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>🤖 Robotik ve Kodlama</h2>
+          <p>Arduino ve sensör uygulamaları ile proje tabanlı öğrenme.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>11. Sınıf</summary>
+        <div class="ders-karti">
+          <h2>🌐 Ağ Sistemleri ve Yönlendirme</h2>
+          <p>Ağ topolojileri ve yönlendirme protokollerinin öğrenilmesi.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>🛡 Siber Güvenlik Temelleri</h2>
+          <p>Ağ güvenliği ve temel siber güvenlik kavramları.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>💻 Sunucu İşletim Sistemleri</h2>
+          <p>Linux ve Windows Server temel yönetimi.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>12. Sınıf</summary>
+        <div class="ders-karti">
+          <h2>🏢 İşletmelerde Mesleki Eğitim</h2>
+          <p>Mesleki uygulamalar ile gerçek iş ortamı deneyimi.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+
+        <div class="ders-karti">
+          <h2>📚 Seçmeli Dersler</h2>
+          <p>Öğrencinin ilgisine göre seçebileceği dersler.</p>
+          <div class="butonlar">
+            <button class="btn">📘 Konular</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">📚 Kaynaklar</button>
+            <button class="btn kilitli" title="Giriş gerekli 🔒">🧾 Sınavlar</button>
+          </div>
+        </div>
+      </details>
+
+    </details>
+<!--Kilit açma tuşları-->
+
+
+
+  </main>
+
+  <footer>
+    <p>© 2025 Kenan YARAMIŞ | Bilişim Teknolojileri Öğretmeni</p>
+  </footer>
+
+<script src="../betikler/dersler.js"></script>
+</body>
+</html>

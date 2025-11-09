@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenan YARAMIŞ | Bilişim Teknolojileri Öğretmeni</title>
+
+  <!-- Genel Stil -->
+  <link rel="stylesheet" href="stiller/stil.css" />
+    
+</head>
+<body>
+  <!-- === Navbar === -->
+  <header class="navbar">
+    <div class="logo">Kenan YARAMIŞ</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Ana Sayfa</a></li>
+        <li><a href="sayfalar/hakkimda.html">Hakkımda</a></li>
+        <li><a href="sayfalar/dersler.html">Derslerim</a></li>
+        <li><a href="sayfalar/sinavlar.html">Sınavlar</a></li>
+        <li><a href="sayfalar/kaynaklar.html">Kaynak Merkezi</a></li>
+        <li><a href="sayfalar/projeler.html">Projeler</a></li>
+        <li><a href="sayfalar/blog.html">Blog</a></li>
+        <li><a href="sayfalar/iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- === Hero Bölümü === -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Meslek Lisesi Bilişim Teknolojileri Öğretmeni</h1>
+      <p>
+        Öğrencilerimle dijital geleceği inşa ediyoruz.<br>
+        Kodlama, tasarım ve teknoloji burada buluşuyor.
+      </p>
+      <div class="cta-buttons">
+        <a href="sayfalar/dersler.html" class="btn">Derslere Git</a>
+      <!-- Kullanici Giriş Kontrolü-->
+        <script>
+          
+          if (localStorage.getItem("OgrenciGirdiMi") !== "evet") {
+            
+            document.write( '<a href="sayfalar/giris.html" class="btn secondary">Giriş Yap</a>');
+          }
+          else{
+            const kullaniciAdi=localStorage.getItem("KullaniciAdiSoyadi");
+            document.write(`
+      <h1>Hoş geldiniz Sayın ${kullaniciAdi}</h1>
+          `);
+          }
+        </script>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- === Ana İçerik === -->
+  <main>
+    <!-- Duyurular -->
+    <section class="duyurular">
+      <h2>Güncel Duyurular</h2>
+      <ul>
+        <li><strong>⚙️ Programlama Temelleri:</strong> 2. sınav 15 Kasım'da yapılacaktır.</li>
+        <li><strong>🤖 Robotik Kodlama:</strong> Arduino proje teslim tarihi 20 Kasım.</li>
+        <li><strong>💡 Yeni Kaynak:</strong> "Algoritma Mantığına Giriş" eklendi.</li>
+      </ul>
+    </section>
+
+    <!-- Hızlı Bağlantılar -->
+    <section class="hizli-baglantilar">
+      <h2>Hızlı Bağlantılar</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Ders Materyalleri</h3>
+          <p>Ders notları, yıllık planlar ve kazanımlar.</p>
+          <a href="sayfalar/dersler.html" class="btn">Göz At</a>
+        </div>
+        <div class="card">
+          <h3>Öğrenci Paneli</h3>
+          <p>Ödev yükleme, sınav takvimi, notlar.</p>
+          <a href="sayfalar/ogrenci.html" class="btn">Giriş Yap</a>
+        </div>
+        <div class="card">
+          <h3>Veli Bilgilendirme</h3>
+          <p>Öğrenci durumu, duyurular, proje özetleri.</p>
+          <a href="sayfalar/veli.html" class="btn">Giriş Yap</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Önizleme -->
+    <section class="blog-preview">
+      <h2>Son Blog Yazıları</h2>
+      <article>
+        <h3>Yeni Web 2.0 Araçlarıyla Etkili Dersler</h3>
+        <p>Canva, Padlet ve Quizizz gibi araçlarla dersleri daha etkileşimli hale getirin...</p>
+        <a href="sayfalar/blog.html" class="btn secondary">Devamını Oku</a>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kenan YARAMIŞ | Bilişim Teknolojileri Öğretmeni</p>
+  </footer>
+<script>
+   localStorage.setItem("OgrenciGirdiMi", "hayır");
+</script>
+
+</body>
+</html>

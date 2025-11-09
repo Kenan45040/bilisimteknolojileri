@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilişim Teknolojileri Temeleri Dersi Kaynakları</title>
+  <link rel="stylesheet" href="../stiller/kaynaklar.css" />
+</head>
+<body>
+
+  <header class="ust-bar">
+    <h1>💻 Bilişim Teknolojileri  Temelleri| Kaynaklar</h1>
+    <a href="../sayfalar/dersler.html" class="geri-btn">← Derslere Dön</a>
+  </header>
+
+  <main class="icerik">
+<<section class="kaynak-kategori">
+  <h2 style="text-align: center;">📘 Ders Kitabı ve Haftalık Kısa Çalışma Notları</h2>
+  <ul>
+    <li><a href="https://meslek.meb.gov.tr/upload/dersmateryali/pdf/BT2025BTT920.pdf" target="_blank">
+      Bilişim Teknolojileri Temelleri Ders Kitabı
+    </a></li>
+    <li>
+      <div id="haftaButonlari" class="hafta-grid"></div>
+    </li>
+  </ul>
+</section>
+
+<script>
+  const container = document.getElementById("haftaButonlari");
+
+  for (let i = 1; i <= 36; i++) {
+  const link = document.createElement("a");
+  link.href = `../dosyalar/btt${i}.pdf`; // örnek: btt1.pdf
+  link.textContent = `${i}. Hafta`;      // görünen metin
+  link.className = "hafta-btn";
+  link.target = "_blank";                // 🔹 PDF yeni sekmede açılır
+  container.appendChild(link);
+}
+
+</script>
+
+<style>
+  /* 🔹 Grid düzeni */
+  .hafta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* 🔹 Buton görünümü */
+  .hafta-btn {
+    display: inline-block;
+    background-color: #81bce6;
+    color: white !important;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .hafta-btn:hover {
+    background-color: #d7e608;
+    transform: scale(1.05);
+  }
+</style>
+
+
+
+    <section class="kaynak-kategori">
+      <h2>🎞️ Ders Videoları</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/@btogretmeni" target="_blank">BT Konu Anlatım Videoları</a></li>
+        <li><a href="#">Bilgisayar Donanımı Tanıtım Videosu</a></li>
+      </ul>
+    </section>
+
+    <section class="kaynak-kategori">
+      <h2>💾 Uygulama Örnekleri</h2>
+      <ul>
+        <li><a href="#">Dosya Yönetimi Uygulaması</a></li>
+        <li><a href="#">Klavye Hız Testi Uygulaması</a></li>
+      </ul>
+    </section>
+
+    <section class="kaynak-kategori">
+      <h2>🔗 Faydalı Bağlantılar</h2>
+      <ul>
+        <li><a href="https://btkakademi.gov.tr" target="_blank">BTK Akademi</a></li>
+        <li><a href="https://www.tubitak.gov.tr" target="_blank">TÜBİTAK</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 | Kenan YARAMIŞ - Bilişim Teknolojileri Öğretmeni</p>
+  </footer>
+
+  <script src="../betikler/kaynaklar.js"></script>
+</body>
+</html>
